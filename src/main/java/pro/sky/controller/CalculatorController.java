@@ -25,24 +25,20 @@ public class CalculatorController {
 
     @GetMapping("/add")
     public String sum(@RequestParam int a, @RequestParam int b) {
-        calculatorService.add(a,b);
         return a + " + " + b + " = " + calculatorService.add(a, b);
     }
 
     @GetMapping("/substract")
     public String substract(@RequestParam int a, @RequestParam int b) {
-        calculatorService.substract(a,b);
         return a + " - " + b + " = " + calculatorService.substract(a, b);
 
     }@GetMapping("/multiply")
     public String multirply(@RequestParam int a, @RequestParam int b) {
-        calculatorService.multiply(a,b);
-        return a + " * " + b + " = " + calculatorService.multiply(a, b);
+        return a + " * " + b + " = " + calculatorService.multiply(a,b);
     }
 
     @GetMapping("/divide")
     public String divide(@RequestParam int a, @RequestParam int b) {
-        calculatorService.add(a,b);
         return a + " / " + b + " = " + calculatorService.divide(a, b);
     }
 
